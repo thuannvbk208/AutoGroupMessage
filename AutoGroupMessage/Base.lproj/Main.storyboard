@@ -19,25 +19,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-Ie-z4R">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBy-EL-ejd">
+                                <rect key="frame" x="176" y="562" width="62" height="30"/>
+                                <state key="normal" title="Add Item"/>
+                                <connections>
+                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGT-yS-Kgx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sTl-kp-LsO">
+                                <rect key="frame" x="0.0" y="492" width="414" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jn7-gB-R8k"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0BT-Ie-z4R" secondAttribute="trailing" id="Ajn-D0-VCD"/>
                             <constraint firstItem="0BT-Ie-z4R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ntg-pP-HJx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0BT-Ie-z4R" secondAttribute="bottom" id="buU-dG-S6L"/>
+                            <constraint firstItem="sTl-kp-LsO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TqT-Cj-b0H"/>
+                            <constraint firstItem="lBy-EL-ejd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WPw-7f-JEX"/>
+                            <constraint firstItem="lBy-EL-ejd" firstAttribute="top" secondItem="sTl-kp-LsO" secondAttribute="bottom" constant="30" id="dAI-4p-t3U"/>
+                            <constraint firstItem="sTl-kp-LsO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pRD-vo-Nl2"/>
                             <constraint firstItem="0BT-Ie-z4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tcp-3q-FBa"/>
+                            <constraint firstItem="sTl-kp-LsO" firstAttribute="top" secondItem="0BT-Ie-z4R" secondAttribute="bottom" id="v0F-Qb-ar4"/>
+                            <constraint firstItem="0BT-Ie-z4R" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/2" id="yhe-sO-fc3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="0BT-Ie-z4R" id="SMN-Cf-ffw"/>
+                        <outlet property="textMessage" destination="sTl-kp-LsO" id="6k5-L1-V7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>

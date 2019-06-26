@@ -13,6 +13,8 @@ class ChatCell: UITableViewCell {
     var nameLabel = UILabel()
     var messageLabel = UILabel()
     
+    var widthLayoutConstraint: NSLayoutConstraint!
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -51,8 +53,7 @@ class ChatCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20.0).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 57.0).isActive = true
-        nameLabel.widthAnchor.constraint(equalToConstant: widthContant).isActive = true
-        
+        nameLabel.widthAnchor.constraint(equalToConstant: (widthNameLabel + 5.0)).isActive = true
         
         messageLabel.text = message
         messageLabel.font = msgFont
@@ -61,7 +62,8 @@ class ChatCell: UITableViewCell {
         contentView.addSubview(messageLabel)
         messageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5.0).isActive = true
         messageLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 57.0).isActive = true
-        messageLabel.widthAnchor.constraint(equalToConstant: widthContant).isActive = true
+        widthLayoutConstraint = messageLabel.widthAnchor.constraint(equalToConstant: widthContant)
+        widthLayoutConstraint.isActive = true
         messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20.0).isActive = true
         
         bubbleView.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: -10.0).isActive = true
