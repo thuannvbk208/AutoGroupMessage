@@ -25,18 +25,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     fileprivate let cellId = "id123"
     
-    var textMessages = ["He",
-                        "Hihi kaka",
-                        "Here's my very first message",
-                        "I'm going to message another long message that will word wrap",
-                        "I'm going to message another long message that will word wrap, I'm going to message another long message that will word wrap, I'm going to message another long message that will word wrap"
+//    var textMessages = ["He",
+//                        "Hihi kaka",
+//                        "Here's my very first message",
+//                        "I'm going to message another long message that will word wrap",
+//                        "I'm going to message another long message that will word wrap, I'm going to message another long message that will word wrap, I'm going to message another long message that will word wrap"
+//    ]
+    
+    var textMessages = ["Thuan",
+                        "Joker",
+                        "Nguyen Van Thuan",
+                        "Lo chi Tham"
     ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.register(ChatCell.self, forCellReuseIdentifier: cellId)
         tableView.register(UINib(nibName: "ChatMessageCell", bundle: nil), forCellReuseIdentifier: "ChatMessageCell")
+        tableView.register(UINib(nibName: "ChatEmojiCell", bundle: nil), forCellReuseIdentifier: "ChatEmojiCell")
         tableView.separatorStyle = .none
     }
     @IBAction func addItem(_ sender: Any) {
@@ -51,8 +59,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageCell", for: indexPath) as! ChatMessageCell
-        cell.configureViews(name: "Nguyen Van Thuan", title: textMessages[indexPath.row])
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageCell", for: indexPath) as! ChatMessageCell
+//        cell.configureViews(name: "Nguyen Van Thuan", title: textMessages[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatEmojiCell", for: indexPath) as! ChatEmojiCell
+        cell.configureViews(name: textMessages[indexPath.row], image: "emoji")
         return cell
     }
     

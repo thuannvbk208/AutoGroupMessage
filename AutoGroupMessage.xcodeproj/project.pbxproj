@@ -17,6 +17,8 @@
 		2C13039C22C26A670045FAE5 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13039B22C26A670045FAE5 /* ChatCell.swift */; };
 		2C6AC5C522C3B8A600E73081 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6AC5C322C3B8A600E73081 /* ChatMessageCell.swift */; };
 		2C6AC5C622C3B8A600E73081 /* ChatMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6AC5C422C3B8A600E73081 /* ChatMessageCell.xib */; };
+		2C6AC5C922C3C29900E73081 /* ChatEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6AC5C722C3C29900E73081 /* ChatEmojiCell.swift */; };
+		2C6AC5CA22C3C29900E73081 /* ChatEmojiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6AC5C822C3C29900E73081 /* ChatEmojiCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2C13039B22C26A670045FAE5 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		2C6AC5C322C3B8A600E73081 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		2C6AC5C422C3B8A600E73081 /* ChatMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageCell.xib; sourceTree = "<group>"; };
+		2C6AC5C722C3C29900E73081 /* ChatEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatEmojiCell.swift; sourceTree = "<group>"; };
+		2C6AC5C822C3C29900E73081 /* ChatEmojiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatEmojiCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				2C13039B22C26A670045FAE5 /* ChatCell.swift */,
 				2C6AC5C322C3B8A600E73081 /* ChatMessageCell.swift */,
 				2C6AC5C422C3B8A600E73081 /* ChatMessageCell.xib */,
+				2C6AC5C722C3C29900E73081 /* ChatEmojiCell.swift */,
+				2C6AC5C822C3C29900E73081 /* ChatEmojiCell.xib */,
 			);
 			path = AutoGroupMessage;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				2C13037822C26A490045FAE5 /* LaunchScreen.storyboard in Resources */,
 				2C6AC5C622C3B8A600E73081 /* ChatMessageCell.xib in Resources */,
+				2C6AC5CA22C3C29900E73081 /* ChatEmojiCell.xib in Resources */,
 				2C13037522C26A490045FAE5 /* Assets.xcassets in Resources */,
 				2C13037322C26A480045FAE5 /* Main.storyboard in Resources */,
 			);
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C13037022C26A480045FAE5 /* ViewController.swift in Sources */,
+				2C6AC5C922C3C29900E73081 /* ChatEmojiCell.swift in Sources */,
 				2C6AC5C522C3B8A600E73081 /* ChatMessageCell.swift in Sources */,
 				2C13036E22C26A480045FAE5 /* AppDelegate.swift in Sources */,
 				2C13039C22C26A670045FAE5 /* ChatCell.swift in Sources */,
